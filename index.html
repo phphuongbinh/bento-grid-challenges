@@ -1,42 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Bento grid</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Bento grid</title>
 
-  Social Media 10x Faster with AI
-  Over 4,000 5-star reviews
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lightYellow: "hsl(31, 66%, 93%)",
+              Yellow: "hsl(39, 100%, 71%)",
+              lightPurple: "hsl(254, 88%, 90%)",
+              Purple: "hsl(256, 67%, 59%)",
+              White: "hsl(0, 0%, 100%)",
+              Black: "hsl(0, 0%, 7%)",
+            },
+          },
+          screens: {
+            "2xl": { max: "1535px" },
+            // => @media (max-width: 1535px) { ... }
 
-  Manage multiple accounts and platforms.
+            xl: { max: "1279px" },
+            // => @media (max-width: 1279px) { ... }
 
-  Maintain a consistent posting schedule.
+            lg: { max: "1023px" },
+            // => @media (max-width: 1023px) { ... }
 
-  Schedule to social media.
-  Optimize post timings to publish content at the perfect time for your audience.
-  
-  Grow followers with non-stop content.
+            md: { max: "767px" },
+            // => @media (max-width: 767px) { ... }
 
-  >56% faster audience growth
-  
-  Create and schedule content quicker.
+            sm: { max: "639px" },
+            // => @media (max-width: 639px) { ... }
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main
+      class="h-[1056px] px-20 py-6 flex gap-6 bg-gray-100 lg:flex-col-reverse lg:h-auto lg:px-16 md:px-12 sm:px-4"
+    >
+      <div
+        class="bento-left flex flex-col w-1/4 gap-6 lg:w-full lg:flex-row md:flex-col"
+      >
+        <div
+          class="bg-lightYellow h-1/2 rounded-2xl sm:rounded-lg px-6 py-12 flex flex-col gap-3 justify-center sm:px-4 sm:py-6"
+        >
+          <h2 class="text-5xl md:text-2xl sm:text-xl font-semibold">
+            Create and schedule content <i class="text-Purple">quicker</i>
+          </h2>
+          <img
+            class="inline-block"
+            src="./assets/images/illustration-create-post.webp"
+            alt=""
+          />
+        </div>
+        <div
+          class="bg-Yellow h-1/2 rounded-2xl sm:rounded-lg p-6 flex flex-col gap-3 overflow-hidden sm:p-4"
+        >
+          <h2 class="text-5xl md:text-2xl sm:text-xl font-semibold">
+            Write your content using AI.
+          </h2>
+          <img
+            class="inline-block mt-auto"
+            src="./assets/images/illustration-ai-content.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="bento-grid w-3/4 grid grid-cols-3 gap-6 h-full grid-rows-[1.5fr_1fr_1fr] lg:w-full md:flex md:flex-col"
+      >
+        <div
+          class="bg-Purple col-span-2 rounded-2xl sm:rounded-lg p-6 flex flex-col items-center justify-center md:order-1"
+        >
+          <h2
+            class="text-6xl font-semibold mb-4 text-center text-White sm:text-4xl"
+          >
+            Social Media <span class="text-Yellow">10x</span> <i>Faster</i> with
+            AI
+          </h2>
+          <img
+            src="./assets/images/illustration-five-stars.webp"
+            class="h-8 mb-3"
+            alt=""
+          />
+          <p class="text-White">Over 4,000 5-stars reviews</p>
+        </div>
+        <div
+          class="bg-lightPurple row-span-2 rounded-2xl sm:rounded-lg flex flex-col gap-4 p-6 pr-0 md:pr-6 md:row-span-1 md:order-4"
+        >
+          <h2 class="text-4xl font-semibold sm:text-xl">
+            Schedule to social media.
+          </h2>
+          <img
+            class="h-96 object-cover object-left rounded-2xl md:w-full md:h-auto"
+            src="./assets/images/illustration-schedule-posts.webp"
+            alt=""
+          />
+          <p class="text-lg font-medium sm:text-base">
+            Optimize post timings to publish content at the perfect time for
+            your audience.
+          </p>
+        </div>
+        <div
+          class="bg-White rounded-2xl sm:rounded-lg flex flex-col p-6 gap-4 md:order-2"
+        >
+          <img
+            class="h-16 object-cover object-left rounded-l-[50px] sm:h-12"
+            src="./assets/images/illustration-multiple-platforms.webp"
+            alt=""
+          />
+          <h2 class="text-4xl font-medium sm:text-2xl">
+            Manage multiple accounts and platforms.
+          </h2>
+        </div>
+        <div
+          class="bg-Yellow rounded-2xl sm:rounded-lg flex flex-col p-6 pb-0 gap-4 overflow-hidden md:order-3"
+        >
+          <h2 class="text-4xl font-semibold leading-9 sm:text-2xl">
+            Maintain a consistent posting Schedule.
+          </h2>
+          <img
+            src="./assets/images/illustration-consistent-schedule.webp"
+            alt=""
+          />
+        </div>
+        <div
+          class="bg-White rounded-2xl sm:rounded-lg flex flex-col p-6 pb-0 gap-4 md:order-6 md:pb-6 md:items-center sm:items-start"
+        >
+          <h2 class="text-7xl font-semibold sm:text-4xl">>56%</h2>
+          <p class="text-lg font-medium">faster audience growth.</p>
+          <img
+            class="h-20 object-contain object-left sm:h-16"
+            src="./assets/images/illustration-audience-growth.webp"
+            alt=""
+          />
+        </div>
 
-  Write your content using AI.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div
+          class="bg-Purple col-span-2 rounded-2xl sm:rounded-lg flex p-6 gap-4 items-center md:order-5 md:flex-col"
+        >
+          <img
+            class="h-60"
+            src="./assets/images/illustration-grow-followers.webp"
+            alt=""
+          />
+          <h2 class="text-4xl text-White sm:text-2xl md:text-center">
+            Grow followers with non-stop content.
+          </h2>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">phbinhdev</a>.
+    </div>
+  </body>
 </html>
